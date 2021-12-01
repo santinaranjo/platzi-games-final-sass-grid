@@ -22,6 +22,17 @@ $color-variacion: #3f579a;
     }
 }
 
+@function calculateRem($size){
+	$remSize: $size / 16px;
+	@return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+	line-height: calculateRem($size)*1.5;	
+}
+
 @function get-opacity($color, $nivel) {
     @return rgba($color, $nivel);
 }
@@ -40,6 +51,7 @@ $color-variacion: #3f579a;
 body {
     margin: 0;
     @include titulos($Fuente1);
+    @include font-size(18px);
 }
 
 main {

@@ -454,6 +454,8 @@ output {
 [hidden] {
   display: none !important;
 }
+/* Media Queries Mixin
+**********************/
 h1 {
   font-size: 30px;
   margin: 0;
@@ -477,6 +479,9 @@ h3 {
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
 }
 
 main {
@@ -663,4 +668,97 @@ main {
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
   grid-column: 4/5;
+}
+
+.caja--con-fondo {
+  display: block;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  position: relative;
+  background-color: #333333;
+  overflow: hidden;
+}
+.caja--con-fondo img {
+  display: block;
+  max-width: 100%;
+  max-height: auto;
+  position: absolute;
+  opacity: 0.5;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.caja--con-fondo__contenido {
+  padding: 20px;
+  position: absolute;
+  text-align: center;
+  color: #ffffff;
+}
+.caja--con-fondo__contenido p {
+  color: #ffffff;
+}
+.caja--con-fondo__contenido h3 {
+  color: #ffffff;
+}
+.caja--con-fondo__categoria {
+  display: block;
+  width: auto;
+  max-width: 100px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #8841DA;
+  color: #ffffff;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+.caja--grande {
+  max-width: 1000px;
+  height: 550px;
+  margin-right: 20px;
+}
+.caja--grande h2 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 50px;
+  font-size: 3.125rem;
+  line-height: 4.6875rem;
+}
+.caja--grande .caja--con-fondo__contenido {
+  padding-top: 200px;
+}
+
+.caja--mediana {
+  max-width: 600px;
+  height: 250px;
+}
+
+.caja--pequena {
+  max-width: 300px;
+  height: 250px;
+}
+
+.caja--con-fondo__stats {
+  margin: 0 auto;
+  position: absolute;
+  bottom: 10px;
+  border-top: none;
+  text-align: center;
+}
+.caja--con-fondo__stats ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.caja--con-fondo__stats li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 50px;
+  opacity: 0.8;
+}
+.caja--con-fondo__stats i {
+  color: #ffffff;
+}
+.caja--con-fondo__stats span {
+  color: #ffffff;
 }
